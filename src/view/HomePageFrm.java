@@ -12,6 +12,7 @@ import javax.swing.JOptionPane;
 import javax.swing.GroupLayout.Alignment;
 import javax.swing.GroupLayout;
 import javax.swing.LayoutStyle.ComponentPlacement;
+import java.awt.Color;
 
 /*
  * To change this license header, choose License Headers in Project Properties.
@@ -62,8 +63,14 @@ public class HomePageFrm extends javax.swing.JFrame {
         jLayeredPane1 = new javax.swing.JLayeredPane();
         jLabel2 = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
+        jButton1.setForeground(new Color(255, 255, 255));
+        jButton1.setBackground(new Color(53, 154, 255));
         jButton3 = new javax.swing.JButton();
+        jButton3.setBackground(new Color(64, 159, 255));
+        jButton3.setForeground(new Color(255, 255, 255));
         jButton4 = new javax.swing.JButton();
+        jButton4.setBackground(new Color(62, 158, 255));
+        jButton4.setForeground(new Color(255, 255, 255));
         jPanel1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
@@ -81,11 +88,18 @@ public class HomePageFrm extends javax.swing.JFrame {
         jLabel15 = new javax.swing.JLabel();
         jLabel16 = new javax.swing.JLabel();
         jButton2 = new javax.swing.JButton();
+        jButton2.setBackground(new Color(255, 55, 55));
+        jButton2.setForeground(new Color(255, 255, 255));
         jButton5 = new javax.swing.JButton();
-        jButton6 = new javax.swing.JButton();
+        jButton5.setBackground(new Color(255, 0, 0));
+        jButton5.setForeground(new Color(255, 255, 255));
         jButton7 = new javax.swing.JButton();
+        jButton7.setForeground(new Color(255, 255, 255));
+        jButton7.setBackground(new Color(62, 158, 255));
        
         jButton9 = new javax.swing.JButton();
+        jButton9.setBackground(new Color(53, 154, 255));
+        jButton9.setForeground(new Color(255, 255, 255));
         jScrollPane1 = new javax.swing.JScrollPane();
         jTextArea1 = new javax.swing.JTextArea();
 
@@ -274,13 +288,6 @@ public class HomePageFrm extends javax.swing.JFrame {
             }
         });
 
-        jButton6.setText("Chơi nhanh");
-        jButton6.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton6ActionPerformed(evt);
-            }
-        });
-
         jButton7.setText("Chơi với máy");
         jButton7.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -307,23 +314,21 @@ public class HomePageFrm extends javax.swing.JFrame {
         			.addGroup(layout.createParallelGroup(Alignment.LEADING)
         				.addComponent(jLabel2, GroupLayout.DEFAULT_SIZE, 402, Short.MAX_VALUE)
         				.addComponent(jPanel1, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        				.addComponent(jScrollPane1, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
         				.addGroup(layout.createSequentialGroup()
-        					.addComponent(jButton6, GroupLayout.PREFERRED_SIZE, 127, GroupLayout.PREFERRED_SIZE)
+        					.addGroup(layout.createParallelGroup(Alignment.TRAILING, false)
+        						.addComponent(jButton7, Alignment.LEADING, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        						.addComponent(jButton9, Alignment.LEADING, GroupLayout.DEFAULT_SIZE, 127, Short.MAX_VALUE))
         					.addPreferredGap(ComponentPlacement.UNRELATED)
-        					.addComponent(jButton9, GroupLayout.PREFERRED_SIZE, 127, GroupLayout.PREFERRED_SIZE)
-        					.addPreferredGap(ComponentPlacement.UNRELATED)
-        					.addComponent(jButton1, GroupLayout.DEFAULT_SIZE, 132, Short.MAX_VALUE))
-        				.addGroup(layout.createSequentialGroup()
+        					.addGroup(layout.createParallelGroup(Alignment.LEADING)
+        						.addComponent(jButton3, GroupLayout.DEFAULT_SIZE, 145, Short.MAX_VALUE)
+        						.addComponent(jButton1, GroupLayout.DEFAULT_SIZE, 104, Short.MAX_VALUE))
+        					.addPreferredGap(ComponentPlacement.RELATED)
         					.addGroup(layout.createParallelGroup(Alignment.LEADING, false)
         						.addComponent(jButton2, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-        						.addComponent(jButton4, GroupLayout.DEFAULT_SIZE, 127, Short.MAX_VALUE))
-        					.addPreferredGap(ComponentPlacement.UNRELATED)
-        					.addGroup(layout.createParallelGroup(Alignment.LEADING, false)
-        						.addComponent(jButton5, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-        						.addComponent(jButton7, GroupLayout.DEFAULT_SIZE, 127, Short.MAX_VALUE))
-        					.addPreferredGap(ComponentPlacement.RELATED, 6, Short.MAX_VALUE)
-        					.addComponent(jButton3, GroupLayout.DEFAULT_SIZE, 132, Short.MAX_VALUE))
-        				.addComponent(jScrollPane1, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
+        						.addComponent(jButton4, GroupLayout.DEFAULT_SIZE, 104, Short.MAX_VALUE))
+        					.addPreferredGap(ComponentPlacement.RELATED, 41, Short.MAX_VALUE))
+        				.addComponent(jButton5, GroupLayout.PREFERRED_SIZE, 117, GroupLayout.PREFERRED_SIZE))
         			.addContainerGap())
         );
         layout.setVerticalGroup(
@@ -338,18 +343,16 @@ public class HomePageFrm extends javax.swing.JFrame {
         			.addGap(32)
         			.addGroup(layout.createParallelGroup(Alignment.BASELINE)
         				.addComponent(jButton9)
-        				.addComponent(jButton6)
-        				.addComponent(jButton1))
+        				.addComponent(jButton1)
+        				.addComponent(jButton4))
         			.addGap(18)
         			.addGroup(layout.createParallelGroup(Alignment.BASELINE)
-        				.addComponent(jButton4)
         				.addComponent(jButton7)
-        				.addComponent(jButton3))
-        			.addGap(21)
-        			.addGroup(layout.createParallelGroup(Alignment.BASELINE)
-        				.addComponent(jButton2)
-        				.addComponent(jButton5))
-        			.addGap(25))
+        				.addComponent(jButton3)
+        				.addComponent(jButton2))
+        			.addGap(18)
+        			.addComponent(jButton5)
+        			.addGap(28))
         );
         getContentPane().setLayout(layout);
 
@@ -404,12 +407,6 @@ public class HomePageFrm extends javax.swing.JFrame {
         this.dispatchEvent(new WindowEvent(this, WindowEvent.WINDOW_CLOSING));
     }//GEN-LAST:event_jButton5ActionPerformed
 
-    
-    private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
-        Client.closeView(Client.View.HOMEPAGE);
-        Client.openView(Client.View.FINDROOM);
-    }//GEN-LAST:event_jButton6ActionPerformed
-
     private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
         // TODO add your handling code here:
         Client.openView(Client.View.GAMEAI);
@@ -440,7 +437,6 @@ public class HomePageFrm extends javax.swing.JFrame {
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
     private javax.swing.JButton jButton5;
-    private javax.swing.JButton jButton6;
     private javax.swing.JButton jButton7;
   
     private javax.swing.JButton jButton9;
