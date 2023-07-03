@@ -66,9 +66,11 @@ public class HomePageFrm extends javax.swing.JFrame {
         jButton1.setForeground(new Color(255, 255, 255));
         jButton1.setBackground(new Color(53, 154, 255));
         jButton3 = new javax.swing.JButton();
+        jButton3.setIcon(new ImageIcon("assets/image/1688850_badge_page_quality_rank_icon (1).png"));
         jButton3.setBackground(new Color(64, 159, 255));
         jButton3.setForeground(new Color(255, 255, 255));
         jButton4 = new javax.swing.JButton();
+        jButton4.setIcon(new ImageIcon("assets/image/211661_eye_icon.png"));
         jButton4.setBackground(new Color(62, 158, 255));
         jButton4.setForeground(new Color(255, 255, 255));
         jPanel1 = new javax.swing.JPanel();
@@ -88,16 +90,20 @@ public class HomePageFrm extends javax.swing.JFrame {
         jLabel15 = new javax.swing.JLabel();
         jLabel16 = new javax.swing.JLabel();
         jButton2 = new javax.swing.JButton();
+        jButton2.setIcon(new ImageIcon("assets/image/4619645_power_reboot_reset_restart_start_icon.png"));
         jButton2.setBackground(new Color(255, 55, 55));
         jButton2.setForeground(new Color(255, 255, 255));
         jButton5 = new javax.swing.JButton();
+        jButton5.setIcon(new ImageIcon("assets/image/9035303_exit_outline_icon.png"));
         jButton5.setBackground(new Color(255, 0, 0));
         jButton5.setForeground(new Color(255, 255, 255));
         jButton7 = new javax.swing.JButton();
+        jButton7.setIcon(new ImageIcon("C:\\Users\\Msi\\eclipse-workspace\\caro_game_client\\assets\\game\\Computer.png"));
         jButton7.setForeground(new Color(255, 255, 255));
         jButton7.setBackground(new Color(62, 158, 255));
        
         jButton9 = new javax.swing.JButton();
+        jButton9.setIcon(new ImageIcon("assets/image/9004732_search_find_magnifier_zoom_icon.png"));
         jButton9.setBackground(new Color(53, 154, 255));
         jButton9.setForeground(new Color(255, 255, 255));
         jScrollPane1 = new javax.swing.JScrollPane();
@@ -134,7 +140,7 @@ public class HomePageFrm extends javax.swing.JFrame {
             }
         });
 
-        jButton4.setText("Tìm phòng");
+        jButton4.setText("Xem phòng");
         jButton4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton4ActionPerformed(evt);
@@ -194,7 +200,7 @@ public class HomePageFrm extends javax.swing.JFrame {
         jLabel15.setText("Số ván hòa");
 
         jLabel16.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel16.setText("{day la so van hoa}");
+        jLabel16.setText("{Đây là số ván hòa}");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -297,7 +303,7 @@ public class HomePageFrm extends javax.swing.JFrame {
 
         
 
-        jButton9.setText("Vào phòng");
+        jButton9.setText("Tìm phòng");
         jButton9.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton9ActionPerformed(evt);
@@ -312,22 +318,22 @@ public class HomePageFrm extends javax.swing.JFrame {
         		.addGroup(layout.createSequentialGroup()
         			.addContainerGap()
         			.addGroup(layout.createParallelGroup(Alignment.LEADING)
-        				.addComponent(jLabel2, GroupLayout.DEFAULT_SIZE, 402, Short.MAX_VALUE)
-        				.addComponent(jPanel1, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        				.addComponent(jLabel2, GroupLayout.DEFAULT_SIZE, 430, Short.MAX_VALUE)
+        				.addComponent(jPanel1, GroupLayout.DEFAULT_SIZE, 430, Short.MAX_VALUE)
         				.addComponent(jScrollPane1, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
         				.addGroup(layout.createSequentialGroup()
-        					.addGroup(layout.createParallelGroup(Alignment.TRAILING, false)
-        						.addComponent(jButton7, Alignment.LEADING, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-        						.addComponent(jButton9, Alignment.LEADING, GroupLayout.DEFAULT_SIZE, 127, Short.MAX_VALUE))
-        					.addPreferredGap(ComponentPlacement.UNRELATED)
+        					.addGroup(layout.createParallelGroup(Alignment.LEADING)
+        						.addComponent(jButton7, GroupLayout.DEFAULT_SIZE, 127, Short.MAX_VALUE)
+        						.addComponent(jButton9, Alignment.TRAILING, GroupLayout.DEFAULT_SIZE, 127, Short.MAX_VALUE))
+        					.addPreferredGap(ComponentPlacement.RELATED)
         					.addGroup(layout.createParallelGroup(Alignment.LEADING)
         						.addComponent(jButton3, GroupLayout.DEFAULT_SIZE, 145, Short.MAX_VALUE)
-        						.addComponent(jButton1, GroupLayout.DEFAULT_SIZE, 104, Short.MAX_VALUE))
-        					.addPreferredGap(ComponentPlacement.RELATED)
+        						.addComponent(jButton1, GroupLayout.DEFAULT_SIZE, 145, Short.MAX_VALUE))
+        					.addPreferredGap(ComponentPlacement.UNRELATED)
         					.addGroup(layout.createParallelGroup(Alignment.LEADING, false)
         						.addComponent(jButton2, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-        						.addComponent(jButton4, GroupLayout.DEFAULT_SIZE, 104, Short.MAX_VALUE))
-        					.addPreferredGap(ComponentPlacement.RELATED, 41, Short.MAX_VALUE))
+        						.addComponent(jButton4, GroupLayout.DEFAULT_SIZE, 118, Short.MAX_VALUE))
+        					.addGap(27))
         				.addComponent(jButton5, GroupLayout.PREFERRED_SIZE, 117, GroupLayout.PREFERRED_SIZE))
         			.addContainerGap())
         );
@@ -340,19 +346,19 @@ public class HomePageFrm extends javax.swing.JFrame {
         			.addComponent(jPanel1, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
         			.addPreferredGap(ComponentPlacement.UNRELATED)
         			.addComponent(jScrollPane1, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
-        			.addGap(32)
+        			.addGap(13)
         			.addGroup(layout.createParallelGroup(Alignment.BASELINE)
-        				.addComponent(jButton9)
-        				.addComponent(jButton1)
-        				.addComponent(jButton4))
-        			.addGap(18)
+        				.addComponent(jButton9, GroupLayout.PREFERRED_SIZE, 29, GroupLayout.PREFERRED_SIZE)
+        				.addComponent(jButton1, GroupLayout.PREFERRED_SIZE, 24, GroupLayout.PREFERRED_SIZE)
+        				.addComponent(jButton4, GroupLayout.PREFERRED_SIZE, 28, GroupLayout.PREFERRED_SIZE))
+        			.addGap(25)
         			.addGroup(layout.createParallelGroup(Alignment.BASELINE)
-        				.addComponent(jButton7)
-        				.addComponent(jButton3)
-        				.addComponent(jButton2))
+        				.addComponent(jButton7, GroupLayout.PREFERRED_SIZE, 32, GroupLayout.PREFERRED_SIZE)
+        				.addComponent(jButton3, GroupLayout.PREFERRED_SIZE, 29, GroupLayout.PREFERRED_SIZE)
+        				.addComponent(jButton2, GroupLayout.PREFERRED_SIZE, 27, GroupLayout.PREFERRED_SIZE))
         			.addGap(18)
-        			.addComponent(jButton5)
-        			.addGap(28))
+        			.addComponent(jButton5, GroupLayout.PREFERRED_SIZE, 29, GroupLayout.PREFERRED_SIZE)
+        			.addGap(18))
         );
         getContentPane().setLayout(layout);
 

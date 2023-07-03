@@ -2,6 +2,8 @@ package view;
 
 
 import controller.Client;
+
+import java.awt.Color;
 import java.sql.SQLException;
 import javax.swing.ImageIcon;
 import javax.swing.JOptionPane;
@@ -51,7 +53,8 @@ public class RegisterFrm extends javax.swing.JFrame {
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
-        jLabel5 = new javax.swing.JLabel();
+        jButton2 = new javax.swing.JButton();
+       
         jPasswordField1 = new javax.swing.JPasswordField();
         jPanel1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
@@ -67,15 +70,17 @@ public class RegisterFrm extends javax.swing.JFrame {
         jLabel4.setText("NickName");
 
         jButton1.setText("Đăng kí");
+        jButton1.setBackground(new Color(255, 87, 87));
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
             }
         });
 
-        jLabel5.setForeground(new java.awt.Color(0, 0, 255));
-        jLabel5.setText("Đã có tài khoản, đăng nhập tại đây");
-        jLabel5.addMouseListener(new java.awt.event.MouseAdapter() {
+       jButton2.setForeground(new java.awt.Color(0, 0, 255));
+       jButton2.setBackground(new Color(102,153,255));
+       jButton2.setText("Đã có tài khoản, đăng nhập tại đây");
+       jButton2.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jLabel5MouseClicked(evt);
             }
@@ -113,7 +118,7 @@ public class RegisterFrm extends javax.swing.JFrame {
             .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addGroup(layout.createSequentialGroup()
                 .addGap(79, 79, 79)
-                .addComponent(jLabel5)
+                .addComponent(jButton2)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addGap(40, 40, 40)
@@ -160,7 +165,7 @@ public class RegisterFrm extends javax.swing.JFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 21, Short.MAX_VALUE)
                         .addComponent(jButton1)
                         .addGap(18, 18, 18)))
-                .addComponent(jLabel5)
+                .addComponent(jButton2)
                 .addContainerGap())
         );
 
@@ -200,12 +205,12 @@ public class RegisterFrm extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JComboBox<ImageIcon> avatarComboBox1;
-    private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton1,jButton2;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
+
     private javax.swing.JLabel jLabel6;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPasswordField jPasswordField1;

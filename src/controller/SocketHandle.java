@@ -67,7 +67,7 @@ public class SocketHandle implements Runnable {
 
         try {
             // Gửi yêu cầu kết nối tới Server đang lắng nghe
-            socketOfClient = new Socket("127.0.0.1", 7786);
+            socketOfClient = new Socket("127.0.0.1", 7783);
             System.out.println("Kết nối thành công!");
             // Tạo luồng đầu ra tại client (Gửi dữ liệu tới server)
             os = new BufferedWriter(new OutputStreamWriter(socketOfClient.getOutputStream()));
@@ -263,22 +263,7 @@ public class SocketHandle implements Runnable {
                     Client.gameClientFrm.updateNumberOfGame();
                     Client.gameClientFrm.newgame();
                 }
-                if(messageSplit[0].equals("voice-message")){
-                    switch (messageSplit[1]) {
-                        case "close-mic":
-                            Client.gameClientFrm.addVoiceMessage("đã tắt mic");
-                            break;
-                        case "open-mic":
-                            Client.gameClientFrm.addVoiceMessage("đã bật mic");
-                            break;
-                        case "close-speaker":
-                            Client.gameClientFrm.addVoiceMessage("đã tắt âm thanh cuộc trò chuyện");
-                            break;
-                        case "open-speaker":
-                            Client.gameClientFrm.addVoiceMessage("đã bật âm thanh cuộc trò chuyện");
-                            break;
-                    }
-                }
+                
                 if(messageSplit[0].equals("left-room")){
                     Client.gameClientFrm.stopTimer();
                     Client.closeAllViews();
