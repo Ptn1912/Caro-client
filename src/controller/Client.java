@@ -7,6 +7,8 @@ package controller;
 
 
 import javax.swing.JFrame;
+import javax.swing.SwingUtilities;
+
 import model.User;
 import view.CompetitorInfoFrm;
 import view.CreateRoomPasswordFrm;
@@ -88,9 +90,12 @@ public class Client {
         return homePageFrm;
     }
     public void initView(){
-        
+    	 SwingUtilities.invokeLater(new Runnable() {
+             public void run() {
         loginFrm = new LoginFrm();
         loginFrm.setVisible(true);
+             }
+    	 });
         socketHandle = new SocketHandle();
         socketHandle.run();
     }
@@ -107,8 +112,12 @@ public class Client {
                     registerFrm.setVisible(true);
                     break;
                 case HOMEPAGE:
-                    homePageFrm = new HomePageFrm();
-                    homePageFrm.setVisible(true);
+                	SwingUtilities.invokeLater(new Runnable() {
+                        public void run() {
+                        	homePageFrm = new HomePageFrm();
+                            homePageFrm.setVisible(true);
+                        }
+                	});
                     break;
                 case ROOMLIST:
                     roomListFrm = new RoomListFrm();
@@ -181,9 +190,14 @@ public class Client {
                     gameNoticeFrm.setVisible(true);
                     break;
                 case LOGIN:
+                	SwingUtilities.invokeLater(new Runnable() {
+                        public void run() {
                     loginFrm = new LoginFrm(arg1, arg2);
                     loginFrm.setVisible(true);
             }
+                	
+        });
+    }
         }
     }
     public static void closeView(View viewName){

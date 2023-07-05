@@ -25,14 +25,14 @@ public class WaitingRoomFrm extends javax.swing.JFrame {
      */
     public WaitingRoomFrm() {
         initComponents();
-        this.setTitle("Caro Game by Ju");
+        this.setTitle("Caro Game");
         isOpenning = false;
         this.setIconImage(new ImageIcon("assets/image/caroicon.png").getImage());
         this.setResizable(false);
         this.setDefaultCloseOperation(EXIT_ON_CLOSE);
         this.setLocationRelativeTo(null);
         jLabel3.setIcon(new ImageIcon("assets/icon/loading2.gif"));
-        jButton2.setIcon(new ImageIcon("assets/icon/5172972_arrow_entrance_exit_internet_log_icon.png"));
+        jButton2.setIcon(new ImageIcon("assets/icon/9080929_logout_icon.png"));
         jLabel4.setVisible(false);
     }
     public void setRoomName(String roomName){

@@ -67,8 +67,8 @@ public class SocketHandle implements Runnable {
 
         try {
             // Gửi yêu cầu kết nối tới Server đang lắng nghe
-            socketOfClient = new Socket("127.0.0.1", 7784);
-            System.out.println("Kết nối thành công!");
+            socketOfClient = new Socket("127.0.0.1", 7785);
+            System.out.println("Ket noi thanh cong!");
             // Tạo luồng đầu ra tại client (Gửi dữ liệu tới server)
             os = new BufferedWriter(new OutputStreamWriter(socketOfClient.getOutputStream()));
             // Luồng đầu vào tại Client (Nhận dữ liệu từ server).
@@ -85,7 +85,7 @@ public class SocketHandle implements Runnable {
                 }
                 //Đăng nhập thành công
                 if(messageSplit[0].equals("login-success")){
-                    System.out.println("Đăng nhập thành công");
+                    System.out.println("Dang nhap thanh cong");
                     Client.closeAllViews();
                     User user= getUserFromString(1,messageSplit);
                     Client.user = user;
@@ -93,14 +93,14 @@ public class SocketHandle implements Runnable {
                 }
                 //Thông tin tài khoản sai
                 if(messageSplit[0].equals("wrong-user")){
-                    System.out.println("Thông tin sai");
+                    System.out.println("Thong tin sai");
                     Client.closeView(Client.View.GAMENOTICE);
                     Client.openView(Client.View.LOGIN,messageSplit[1],messageSplit[2]);
                     Client.loginFrm.showError("Tài khoản hoặc mật khẩu không chính xác");
                 }
                 //Tài khoản đã đăng nhập ở nơi khác
                 if(messageSplit[0].equals("dupplicate-login")){
-                    System.out.println("Đã đăng nhập");
+                    System.out.println("Da dang nhap");
                     Client.closeView(Client.View.GAMENOTICE);
                     Client.openView(Client.View.LOGIN,messageSplit[1],messageSplit[2]);
                     Client.loginFrm.showError("Tài khoản đã đăng nhập ở nơi khác");
@@ -165,7 +165,7 @@ public class SocketHandle implements Runnable {
                 }
                
                 if(messageSplit[0].equals("go-to-room")){
-                    System.out.println("Vào phòng");
+                    System.out.println("Vao phong");
                     int roomID = Integer.parseInt(messageSplit[1]);
                     String competitorIP = messageSplit[2];
                     int isStart = Integer.parseInt(messageSplit[3]);
@@ -187,7 +187,7 @@ public class SocketHandle implements Runnable {
                         }
                     }
                     Client.closeAllViews();
-                    System.out.println("Đã vào phòng: "+roomID);
+                    System.out.println("Da vao phong: "+roomID);
                     //Xử lý vào phòng
                     Client.openView(Client.View.GAMECLIENT
                             , competitor
@@ -257,7 +257,7 @@ public class SocketHandle implements Runnable {
                 }
                 if(messageSplit[0].equals("competitor-time-out")){
                     Client.gameClientFrm.increaseWinMatchToUser();
-                    Client.openView(Client.View.GAMENOTICE,"Bạn đã thắng do đối thủ quá thới gian","Đang thiết laapju ván chơi mới");
+                    Client.openView(Client.View.GAMENOTICE,"Bạn đã thắng do đối thủ quá thới gian","Đang thiết lập ván chơi mới");
                     Thread.sleep(4000);
                     Client.closeView(Client.View.GAMENOTICE);
                     Client.gameClientFrm.updateNumberOfGame();
