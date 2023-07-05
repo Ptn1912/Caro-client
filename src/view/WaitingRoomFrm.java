@@ -32,7 +32,7 @@ public class WaitingRoomFrm extends javax.swing.JFrame {
         this.setDefaultCloseOperation(EXIT_ON_CLOSE);
         this.setLocationRelativeTo(null);
         jLabel3.setIcon(new ImageIcon("assets/icon/loading2.gif"));
-        jButton2.setIcon(new ImageIcon("assets/icon/door_exit.png"));
+        jButton2.setIcon(new ImageIcon("assets/icon/5172972_arrow_entrance_exit_internet_log_icon.png"));
         jLabel4.setVisible(false);
     }
     public void setRoomName(String roomName){

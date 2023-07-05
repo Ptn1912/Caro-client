@@ -104,7 +104,7 @@ public class GameClientFrm extends javax.swing.JFrame{
             for (int j = 0; j < size; j++) {
                 button[i][j] = new JButton("");
                 button[i][j].setBackground(Color.white);
-                button[i][j].setDisabledIcon(new ImageIcon("assets/image/border.jpg"));
+                button[i][j].setDisabledIcon(new ImageIcon("assets/image/border2.jpg"));
                 jPanel1.add(button[i][j]);
             }
         }

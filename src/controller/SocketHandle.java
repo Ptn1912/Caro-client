@@ -67,7 +67,7 @@ public class SocketHandle implements Runnable {
 
         try {
             // Gửi yêu cầu kết nối tới Server đang lắng nghe
-            socketOfClient = new Socket("127.0.0.1", 7783);
+            socketOfClient = new Socket("127.0.0.1", 7784);
             System.out.println("Kết nối thành công!");
             // Tạo luồng đầu ra tại client (Gửi dữ liệu tới server)
             os = new BufferedWriter(new OutputStreamWriter(socketOfClient.getOutputStream()));

@@ -3,193 +3,121 @@ package view;
 import controller.Client;
 import javax.swing.ImageIcon;
 import javax.swing.JOptionPane;
+import javax.swing.JPanel;
+
 import model.User;
 import java.awt.Toolkit;
 import javax.swing.GroupLayout.Alignment;
 import javax.swing.GroupLayout;
 import javax.swing.LayoutStyle.ComponentPlacement;
+import javax.swing.border.EmptyBorder;
 
 import java.awt.Color;
 import java.awt.Font;
+import javax.swing.JLabel;
+import javax.swing.JTextField;
+import javax.swing.JButton;
+import javax.swing.JFrame;
 
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
+import javax.swing.JPasswordField;
+import java.awt.BorderLayout;
 
-/**
- *
- * @author Admin
- */
 public class LoginFrm extends javax.swing.JFrame {
-    /**
-     * Creates new form DemoFrm
-     */
-    public LoginFrm() {
-    	setAlwaysOnTop(true);
-        initComponents();
-        this.setTitle("Caro Game Nhóm 5");
-        this.setDefaultCloseOperation(EXIT_ON_CLOSE);
-        this.setResizable(false);
-        this.setLocationRelativeTo(null);
-    }
-
-    public LoginFrm(String taiKhoan, String matKhau) {
-        initComponents();
-        jPasswordField1.setText(matKhau);
-        jTextField1.setText(taiKhoan);
-        this.setDefaultCloseOperation(EXIT_ON_CLOSE);
-        this.setResizable(false);
-        this.setLocationRelativeTo(null);
-    }
+	 public LoginFrm() {
+	        initComponents();
+	    }
+	 public LoginFrm(String taiKhoan, String matKhau) {
+	        initComponents();
+	      
+	    }
+	 public void initComponents() {
+	    	setTitle("Caro Game");
+	    	setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+			setBounds(100, 100, 852, 557);
+			setResizable(false);
+			setLocationRelativeTo(null);
+			setVisible(true);
+			
+			getContentPane = new JPanel();
+			getContentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
+			setContentPane(getContentPane);
+	        getContentPane().setLayout(null);
+	        
+	        JLabel lblNewLabel_1 = new JLabel("Đăng Nhập");
+	        lblNewLabel_1.setForeground(new Color(255, 255, 255));
+	        lblNewLabel_1.setFont(new Font("Tahoma", Font.BOLD, 30));
+	        lblNewLabel_1.setBounds(293, 33, 337, 101);
+	        getContentPane().add(lblNewLabel_1);
+	        
+	        JLabel lblNewLabel_2 = new JLabel("Tên đăng nhập");
+	        lblNewLabel_2.setForeground(new Color(255, 255, 255));
+	        lblNewLabel_2.setFont(new Font("Tahoma", Font.BOLD, 22));
+	        lblNewLabel_2.setBounds(112, 160, 174, 55);
+	        getContentPane().add(lblNewLabel_2);
+	        
+	        textField = new JTextField();
+	        textField.setFont(new Font("Tahoma", Font.PLAIN, 16));
+	        textField.setBackground(new Color(251, 251, 251));
+	        textField.setBounds(326, 166, 314, 55);
+	        getContentPane().add(textField);
+	        textField.setColumns(10);
+	        
+	        JLabel lblNewLabel_3 = new JLabel("Mật khẩu");
+	        lblNewLabel_3.setForeground(new Color(255, 255, 255));
+	        lblNewLabel_3.setFont(new Font("Tahoma", Font.BOLD, 22));
+	        lblNewLabel_3.setBounds(112, 291, 143, 51);
+	        getContentPane().add(lblNewLabel_3);
+	        
+	        JButton btnNewButton = new JButton("Đăng kí");
+	        btnNewButton.setBackground(new Color(255, 66, 66));
+	        btnNewButton.addActionListener(new ActionListener() {
+	        	public void actionPerformed(ActionEvent evt) {
+	        		jButton2ActionPerformed(evt);
+	        	}
+	        });
+	        btnNewButton.setFont(new Font("Tahoma", Font.PLAIN, 18));
+	        btnNewButton.setBounds(156, 424, 174, 51);
+	        getContentPane().add(btnNewButton);
+	        
+	        passwordField = new JPasswordField();
+	        passwordField.setFont(new Font("Tahoma", Font.PLAIN, 16));
+	        passwordField.setBackground(new Color(251, 251, 251));
+	        passwordField.setBounds(326, 293, 314, 55);
+	        getContentPane().add(passwordField);
+	        
+	        JButton btnNewButton_1 = new JButton("Đăng nhập");
+	        btnNewButton_1.addActionListener(new ActionListener() {
+	        	public void actionPerformed(ActionEvent evt) {
+	        		jButton1ActionPerformed(evt);
+	        	}
+	        });
+	        btnNewButton_1.setBackground(new Color(105, 148, 235));
+	        btnNewButton_1.setFont(new Font("Tahoma", Font.PLAIN, 18));
+	        btnNewButton_1.setBounds(489, 424, 165, 51);
+	        getContentPane().add(btnNewButton_1);
+	        
+	        JLabel lblNewLabel = new JLabel("");
+	        lblNewLabel.setIcon(new ImageIcon("assets/free-figma-game-tic-tac-toe_1635143619.jpg"));
+	       
+	        lblNewLabel.setBounds(0, 0, 838, 520);
+	        getContentPane().add(lblNewLabel);
+	    }
+    
     public void showError(String message){
         JOptionPane.showMessageDialog(rootPane, message);
     }
     public void log(String message){
         JOptionPane.showMessageDialog(rootPane,"ID của server thread là:"+ message);
     }
-    /**
-     * This method is called from within the constructor to initialize the form.
-     * WARNING: Do NOT modify this code. The content of this method is always
-     * regenerated by the Form Editor.
-     */
-    @SuppressWarnings("unchecked")
-    // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
-    private void initComponents() {
-
-        jTextField1 = new javax.swing.JTextField();
-        jLabel1 = new javax.swing.JLabel();
-        jLabel1.setFont(new Font("Tahoma", Font.PLAIN, 11));
-        jLabel2 = new javax.swing.JLabel();
-        jLabel2.setFont(new Font("Tahoma", Font.PLAIN, 11));
-        jPasswordField1 = new javax.swing.JPasswordField();
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
-        jPanel1 = new javax.swing.JPanel();
-        jLabel3 = new javax.swing.JLabel();
-
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-
-        jLabel1.setText("Tài khoản");
-
-        jLabel2.setText("Mật khẩu");
-
-        jButton1.setText("Đăng Nhập");
-        jButton1.setBackground(new Color(126,217,87));
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
-        	public void mouseExited(java.awt.event.MouseEvent e) {
-        		jButton1.setBackground(new Color(126, 217, 87));
-        		jButton1.setForeground(new Color(255, 255, 255));
-            }
-
-           
-            public void mouseEntered(java.awt.event.MouseEvent e) {
-            	jButton1.setBackground(new Color(82, 189, 36));
-            	jButton1.setForeground(new Color(255, 255, 255));
-            }
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
-            }
-        });
-
-        jButton2.setText("Đăng kí");
-        jButton2.setBackground(new Color(255,87,87));
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
-        	public void mouseExited(java.awt.event.MouseEvent e) {
-                jButton2.setBackground(new Color(255, 87, 87));
-                jButton2.setForeground(new Color(255, 255, 255));
-            }
-
-           
-            public void mouseEntered(java.awt.event.MouseEvent e) {
-            	jButton2.setBackground(new Color(219, 72, 72));
-            	jButton2.setForeground(new Color(255, 255, 255));
-            }
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
-            }
-        });
-
-        jPanel1.setBackground(new java.awt.Color(102, 102, 102));
-
-        jLabel3.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        jLabel3.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel3.setText("Đăng Nhập");
-
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1Layout.setHorizontalGroup(
-        	jPanel1Layout.createParallelGroup(Alignment.LEADING)
-        		.addGroup(Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-        			.addContainerGap(158, Short.MAX_VALUE)
-        			.addComponent(jLabel3, GroupLayout.PREFERRED_SIZE, 102, GroupLayout.PREFERRED_SIZE)
-        			.addGap(140))
-        );
-        jPanel1Layout.setVerticalGroup(
-        	jPanel1Layout.createParallelGroup(Alignment.TRAILING)
-        		.addGroup(Alignment.LEADING, jPanel1Layout.createSequentialGroup()
-        			.addGap(18)
-        			.addComponent(jLabel3)
-        			.addContainerGap(22, Short.MAX_VALUE))
-        );
-        jPanel1.setLayout(jPanel1Layout);
-
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        layout.setHorizontalGroup(
-        	layout.createParallelGroup(Alignment.LEADING)
-        		.addGroup(layout.createSequentialGroup()
-        			.addGap(43)
-        			.addGroup(layout.createParallelGroup(Alignment.LEADING)
-        				.addGroup(Alignment.TRAILING, layout.createSequentialGroup()
-        					.addComponent(jLabel1, GroupLayout.PREFERRED_SIZE, 64, GroupLayout.PREFERRED_SIZE)
-        					.addGap(18))
-        				.addGroup(layout.createSequentialGroup()
-        					.addComponent(jLabel2, GroupLayout.PREFERRED_SIZE, 61, GroupLayout.PREFERRED_SIZE)
-        					.addGap(17)))
-        			.addGroup(layout.createParallelGroup(Alignment.LEADING, false)
-        				.addComponent(jPasswordField1)
-        				.addComponent(jTextField1, GroupLayout.DEFAULT_SIZE, 146, Short.MAX_VALUE))
-        			.addContainerGap(129, Short.MAX_VALUE))
-        		.addGroup(Alignment.TRAILING, layout.createSequentialGroup()
-        			.addGap(66)
-        			.addComponent(jButton2, GroupLayout.PREFERRED_SIZE, 107, GroupLayout.PREFERRED_SIZE)
-        			.addGap(56)
-        			.addComponent(jButton1, GroupLayout.DEFAULT_SIZE, 107, Short.MAX_VALUE)
-        			.addGap(64))
-        		.addGroup(Alignment.TRAILING, layout.createSequentialGroup()
-        			.addContainerGap()
-        			.addComponent(jPanel1, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-        			.addContainerGap())
-        );
-        layout.setVerticalGroup(
-        	layout.createParallelGroup(Alignment.LEADING)
-        		.addGroup(layout.createSequentialGroup()
-        			.addComponent(jPanel1, GroupLayout.PREFERRED_SIZE, 62, GroupLayout.PREFERRED_SIZE)
-        			.addGap(26)
-        			.addGroup(layout.createParallelGroup(Alignment.BASELINE)
-        				.addComponent(jTextField1, GroupLayout.PREFERRED_SIZE, 25, GroupLayout.PREFERRED_SIZE)
-        				.addComponent(jLabel1))
-        			.addGap(18)
-        			.addGroup(layout.createParallelGroup(Alignment.LEADING)
-        				.addComponent(jLabel2)
-        				.addComponent(jPasswordField1, GroupLayout.PREFERRED_SIZE, 25, GroupLayout.PREFERRED_SIZE))
-        			.addGap(43)
-        			.addGroup(layout.createParallelGroup(Alignment.BASELINE)
-        				.addComponent(jButton1, GroupLayout.PREFERRED_SIZE, 26, GroupLayout.PREFERRED_SIZE)
-        				.addComponent(jButton2, GroupLayout.PREFERRED_SIZE, 25, GroupLayout.PREFERRED_SIZE))
-        			.addGap(57))
-        );
-        getContentPane().setLayout(layout);
-
-        pack();
-    }// </editor-fold>//GEN-END:initComponents
-
+    
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         try {
-            String taiKhoan = jTextField1.getText();
+            String taiKhoan = textField.getText();
             if(taiKhoan.isEmpty())
                 throw new Exception("Vui lòng nhập tên tài khoản");
-            String matKhau = String.copyValueOf(jPasswordField1.getPassword());
+            String matKhau = String.copyValueOf(passwordField.getPassword());
             if(matKhau.isEmpty())
                 throw new Exception("Vui lòng nhập mật khẩu");
             Client.closeAllViews();
@@ -198,21 +126,19 @@ public class LoginFrm extends javax.swing.JFrame {
         } catch (Exception ex) {
             JOptionPane.showMessageDialog(rootPane, ex.getMessage());
         }
-    }//GEN-LAST:event_jButton1ActionPerformed
-
+    }
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         Client.closeView(Client.View.LOGIN);
         Client.openView(Client.View.REGISTER);
     }//GEN-LAST:event_jButton2ActionPerformed
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
+
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JPasswordField jPasswordField1;
-    private javax.swing.JTextField jTextField1;
-    // End of variables declaration//GEN-END:variables
+	private JPanel getContentPane;
+    private JTextField textField;
+    private JPasswordField passwordField;
 }
