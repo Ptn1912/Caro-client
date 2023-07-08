@@ -248,7 +248,7 @@ public class HomePageFrm extends javax.swing.JFrame {
         lblNewLabel_8.setText(Integer.toString(Client.user.getNumberOfwin()));
         lblNewLabel_9.setText(Integer.toString(Client.user.getNumberOfGame()));
         lblNewLabel_13.setText(""+Client.user.getNumberOfDraw());
-        lblNewLabel_10.setText(""+(Client.user.getNumberOfGame()+Client.user.getNumberOfwin()*10));
+        lblNewLabel_10.setText(""+(Client.user.getNumberOfwin()*10));
         lblNewLabel_11.setText(""+Client.user.getRank());
         
         JLabel lblNewLabel_15 = new JLabel("");
