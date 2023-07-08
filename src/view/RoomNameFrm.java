@@ -1,7 +1,3 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
- */
 package view;
 
 import controller.Client;
@@ -28,10 +24,6 @@ import javax.swing.JButton;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 
-/**
- *
- * @author Admin
- */
 public class RoomNameFrm extends javax.swing.JFrame {
     public RoomNameFrm() {
         initComponents();
@@ -46,7 +38,7 @@ public class RoomNameFrm extends javax.swing.JFrame {
 		setVisible(true);
 		
 		getContentPane = new JPanel();
-		getContentPane.setBackground(new Color(236, 236, 236));
+		getContentPane.setBackground(new Color(172, 214, 255));
 		getContentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(getContentPane);
         getContentPane().setLayout(null);
@@ -101,13 +93,12 @@ public class RoomNameFrm extends javax.swing.JFrame {
         getContentPane.add(lblNewLabel_4);
         
         
-    }// </editor-fold>//GEN-END:initComponents
+    }
 
-    private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
+    private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {
         
-    }//GEN-LAST:event_jTextField1ActionPerformed
-
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    }
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {
         String roomName = textField.getText();
         if(roomName.equals("")){
             JOptionPane.showMessageDialog(rootPane, "Vui lòng nhập mã phòng");
@@ -122,13 +113,8 @@ public class RoomNameFrm extends javax.swing.JFrame {
         } catch (IOException ex) {
             JOptionPane.showMessageDialog(rootPane, ex.getMessage());
         }
-    }//GEN-LAST:event_jButton1ActionPerformed
-
-
-    // Variables declaration - do not modify//GEN-BEGIN:variables
+    }
     private javax.swing.JButton jButton1;
-    
- 
     private JPanel getContentPane;
     private JTextField textField;
     private JTextField textField_1;

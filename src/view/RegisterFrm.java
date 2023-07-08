@@ -155,10 +155,8 @@ public class RegisterFrm extends javax.swing.JFrame {
         } catch (Exception ex) {
             JOptionPane.showMessageDialog(rootPane, ex.getMessage());
         }
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }
 
-
-    // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JComboBox<ImageIcon> comboBox;
 
 	private JPanel getContentPane;

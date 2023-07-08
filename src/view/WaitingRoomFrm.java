@@ -1,8 +1,4 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package view;
 
 import controller.Client;
@@ -14,15 +10,9 @@ import javax.swing.ImageIcon;
 import javax.swing.JOptionPane;
 import static javax.swing.WindowConstants.EXIT_ON_CLOSE;
 
-/**
- *
- * @author Admin
- */
 public class WaitingRoomFrm extends javax.swing.JFrame {
     private boolean isOpenning;
-    /**
-     * Creates new form WaitingRoomFrm
-     */
+
     public WaitingRoomFrm() {
         initComponents();
         this.setTitle("Caro Game");
@@ -141,9 +131,9 @@ public class WaitingRoomFrm extends javax.swing.JFrame {
         );
 
         pack();
-    }// </editor-fold>//GEN-END:initComponents
+    }
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {
         if(isOpenning) return;
         try {
             Client.closeView(Client.View.WAITINGROOM);
@@ -152,15 +142,11 @@ public class WaitingRoomFrm extends javax.swing.JFrame {
         } catch (IOException ex) {
             JOptionPane.showMessageDialog(rootPane, ex.getMessage());
         }
-    }//GEN-LAST:event_jButton2ActionPerformed
-
-
-    // Variables declaration - do not modify//GEN-BEGIN:variables
+    }
     private javax.swing.JButton jButton2;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JPanel jPanel1;
-    // End of variables declaration//GEN-END:variables
 }

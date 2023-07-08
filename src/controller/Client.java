@@ -101,11 +101,15 @@ public class Client {
     }
     
     public static void openView(View viewName){
+    	
         if(viewName != null){
             switch(viewName){
                 case LOGIN:
+                	 SwingUtilities.invokeLater(new Runnable() {
+                         public void run() {
                     loginFrm = new LoginFrm();
                     loginFrm.setVisible(true);
+                         }});
                     break;
                 case REGISTER:
                     registerFrm = new RegisterFrm();
@@ -151,6 +155,8 @@ public class Client {
             }
         }
     }
+    	
+    
     public static void openView(View viewName, int arg1, String arg2){
         if(viewName != null){
             switch(viewName){
@@ -201,10 +207,14 @@ public class Client {
         }
     }
     public static void closeView(View viewName){
+    	
         if(viewName != null){
             switch(viewName){
                 case LOGIN:
+                	 SwingUtilities.invokeLater(new Runnable() {
+                         public void run() {
                     loginFrm.dispose();
+                         }});
                     break;
                 case REGISTER:
                     registerFrm.dispose();
@@ -253,7 +263,7 @@ public class Client {
             
         }
     }
-    
+    	
     public static void closeAllViews(){
         if(loginFrm!=null) loginFrm.dispose();
         if(registerFrm!=null) registerFrm.dispose();

@@ -160,13 +160,10 @@ public class LoginFrm extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(rootPane, ex.getMessage());
         }
     }
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {
         Client.closeView(Client.View.LOGIN);
         Client.openView(Client.View.REGISTER);
-    }//GEN-LAST:event_jButton2ActionPerformed
-
-    // Variables declaration - do not modify//GEN-BEGIN:variables
-
+    }
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
