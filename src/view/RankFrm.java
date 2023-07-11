@@ -20,7 +20,7 @@ public class RankFrm extends javax.swing.JFrame {
   
     public RankFrm() {
         initComponents();
-        this.setTitle("Caro Game Nhóm 5");
+        this.setTitle("Caro Game ");
         tableModel = (DefaultTableModel) jTable1.getModel();
         this.setIconImage(new ImageIcon("assets/image/caroicon.png").getImage());
         this.setResizable(false);
@@ -138,7 +138,6 @@ public class RankFrm extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(rootPane, "Thứ hạng của bạn là "+(jTable1.getSelectedRow()+1));
             return;
         }
-        Client.openView(Client.View.COMPETITORINFO,listUserStatics.get(jTable1.getSelectedRow()));
     }
 
 

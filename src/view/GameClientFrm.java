@@ -117,7 +117,6 @@ public class GameClientFrm extends javax.swing.JFrame{
         jLabel17.setText(Integer.toString(competitor.getNumberOfwin()));
         jLabel3.setVisible(false);
         jLabel5.setVisible(false);
-        jButton2.setVisible(false);
         yourTurnJLabel3.setVisible(false);
         compretitorTurnJLabel.setVisible(false);
         timerjLabel19.setVisible(false);
@@ -186,8 +185,7 @@ public class GameClientFrm extends javax.swing.JFrame{
     public void exitGame() {
         try {
             timer.stop();
-            voiceCloseMic();
-            voiceStopListening();
+            
             Client.socketHandle.write("left-room,");
             Client.closeAllViews();
         
@@ -200,8 +198,7 @@ public class GameClientFrm extends javax.swing.JFrame{
     
     public void stopAllThread(){
         timer.stop();
-        voiceCloseMic();
-        voiceStopListening();
+        
     }
     private void initComponents() {
 
@@ -235,13 +232,10 @@ public class GameClientFrm extends javax.swing.JFrame{
         jPanel4 = new javax.swing.JPanel();
         jLabel18 = new javax.swing.JLabel();
         jLabel20 = new javax.swing.JLabel();
-        jPanel5 = new javax.swing.JPanel();
-        jButton2 = new javax.swing.JButton();
         jButton1 = new javax.swing.JButton();
         compretitorTurnJLabel = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
-        jProgressBar1 = new javax.swing.JProgressBar();
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenu1 = new javax.swing.JMenu();
         jMenuItem1 = new javax.swing.JMenuItem();
@@ -415,33 +409,6 @@ public class GameClientFrm extends javax.swing.JFrame{
         jLabel20.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel20.setText("Tỉ số:  0-0");
 
-        jPanel5.setBackground(new java.awt.Color(102, 102, 102));
-
-        jButton2.setBackground(new java.awt.Color(102, 102, 102));
-        jButton2.setForeground(new java.awt.Color(255, 255, 255));
-        jButton2.setText("Cầu hòa");
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
-            }
-        });
-
-        javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
-        jPanel5Layout.setHorizontalGroup(
-        	jPanel5Layout.createParallelGroup(Alignment.LEADING)
-        		.addGroup(jPanel5Layout.createSequentialGroup()
-        			.addGap(120)
-        			.addComponent(jButton2, GroupLayout.PREFERRED_SIZE, 96, GroupLayout.PREFERRED_SIZE)
-        			.addContainerGap(144, Short.MAX_VALUE))
-        );
-        jPanel5Layout.setVerticalGroup(
-        	jPanel5Layout.createParallelGroup(Alignment.LEADING)
-        		.addGroup(jPanel5Layout.createSequentialGroup()
-        			.addComponent(jButton2)
-        			.addContainerGap(GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-        jPanel5.setLayout(jPanel5Layout);
-
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
@@ -458,11 +425,7 @@ public class GameClientFrm extends javax.swing.JFrame{
         jMenu1.setText("Menu");
         jMenu1.setToolTipText("");
 
-        jMenuItem1.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_F1, java.awt.event.InputEvent.CTRL_DOWN_MASK));
-        jMenuItem1.setText("Game mới");
-      
-        jMenu1.add(jMenuItem1);
-
+       
         jMenuItem2.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_F4, java.awt.event.InputEvent.ALT_DOWN_MASK));
         jMenuItem2.setText("Thoát");
         jMenuItem2.addActionListener(new java.awt.event.ActionListener() {
@@ -480,7 +443,6 @@ public class GameClientFrm extends javax.swing.JFrame{
         	layout.createParallelGroup(Alignment.LEADING)
         		.addGroup(layout.createSequentialGroup()
         			.addGroup(layout.createParallelGroup(Alignment.TRAILING)
-        				.addComponent(jPanel5, 0, 0, Short.MAX_VALUE)
         				.addGroup(layout.createSequentialGroup()
         					.addContainerGap()
         					.addGroup(layout.createParallelGroup(Alignment.LEADING)
@@ -536,9 +498,6 @@ public class GameClientFrm extends javax.swing.JFrame{
         						.addGroup(layout.createSequentialGroup()
         							.addContainerGap()
         							.addComponent(jScrollPane1, GroupLayout.DEFAULT_SIZE, 354, Short.MAX_VALUE))
-        						.addGroup(layout.createSequentialGroup()
-        							.addGap(0, 216, Short.MAX_VALUE)
-        							.addComponent(jProgressBar1, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
         						.addComponent(jPanel2, GroupLayout.DEFAULT_SIZE, 362, Short.MAX_VALUE))
         					.addGap(24))
         				.addGroup(layout.createSequentialGroup()
@@ -588,9 +547,7 @@ public class GameClientFrm extends javax.swing.JFrame{
         						.addComponent(jLabel17))
         					.addGap(44)
         					.addComponent(jPanel4, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
-        					.addPreferredGap(ComponentPlacement.RELATED)
-        					.addComponent(jProgressBar1, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
-        					.addPreferredGap(ComponentPlacement.RELATED)
+        					.addGap(20)
         					.addGroup(layout.createParallelGroup(Alignment.LEADING)
         						.addComponent(jLabel7)
         						.addGroup(layout.createSequentialGroup()
@@ -609,13 +566,10 @@ public class GameClientFrm extends javax.swing.JFrame{
         					.addPreferredGap(ComponentPlacement.RELATED)
         					.addGroup(layout.createParallelGroup(Alignment.LEADING)
         						.addGroup(layout.createSequentialGroup()
-        							.addComponent(jButton1, GroupLayout.DEFAULT_SIZE, 29, Short.MAX_VALUE)
+        							.addComponent(jButton1, GroupLayout.DEFAULT_SIZE, 37, Short.MAX_VALUE)
         							.addGap(31))
-        						.addGroup(layout.createSequentialGroup()
-        							.addComponent(jTextField1, GroupLayout.PREFERRED_SIZE, 29, GroupLayout.PREFERRED_SIZE)
-        							.addPreferredGap(ComponentPlacement.RELATED)))
-        					.addPreferredGap(ComponentPlacement.RELATED)
-        					.addComponent(jPanel5, GroupLayout.PREFERRED_SIZE, 28, GroupLayout.PREFERRED_SIZE))
+        						.addComponent(jTextField1, GroupLayout.PREFERRED_SIZE, 29, GroupLayout.PREFERRED_SIZE))
+        					.addGap(28))
         				.addComponent(jPanel1, GroupLayout.PREFERRED_SIZE, 631, GroupLayout.PREFERRED_SIZE))
         			.addContainerGap())
         );
@@ -644,21 +598,6 @@ public class GameClientFrm extends javax.swing.JFrame{
         } catch (IOException ex) {
             JOptionPane.showMessageDialog(rootPane, ex.getMessage());
         } catch (Exception ex) {
-            JOptionPane.showMessageDialog(rootPane, ex.getMessage());
-        }
-    }
-
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {
-        
-        try {
-            int res = JOptionPane.showConfirmDialog(rootPane, "Bạn có thực sự muốn cầu hòa ván chơi này", "Yêu cầu cầu hòa", JOptionPane.YES_NO_OPTION);
-            if (res == JOptionPane.YES_OPTION) {
-                Client.socketHandle.write("draw-request,");
-                timer.stop();
-                setEnableButton(false);
-                Client.openView(Client.View.GAMENOTICE, "Yêu cầu hòa", "Đang chờ phản hồi từ đối thủ");
-            }
-        } catch (IOException ex) {
             JOptionPane.showMessageDialog(rootPane, ex.getMessage());
         }
     }
@@ -755,19 +694,12 @@ public class GameClientFrm extends javax.swing.JFrame{
             }
         }
     }
-
-    public void displayDrawRefuse(){
-        JOptionPane.showMessageDialog(rootPane, "Đối thủ không chấp nhận hòa, mời bạn chơi tiếp");
-        timer.start();
-        setEnableButton(true);
-    }
-    
     public void displayCompetitorTurn() {
         timerjLabel19.setVisible(false);
         compretitorTurnJLabel.setVisible(true);
         jLabel5.setVisible(true);
         yourTurnJLabel3.setVisible(false);
-        jButton2.setVisible(false);
+      
         jLabel3.setVisible(false);
     }
     public void displayUserTurn(){
@@ -775,7 +707,7 @@ public class GameClientFrm extends javax.swing.JFrame{
         compretitorTurnJLabel.setVisible(false);
         jLabel5.setVisible(false);
         yourTurnJLabel3.setVisible(true);
-        jButton2.setVisible(true);
+      
         jLabel3.setVisible(true);
     }
     
@@ -848,142 +780,7 @@ public class GameClientFrm extends javax.swing.JFrame{
             }
         }
     }
-    public void voiceOpenMic() {
-
-        sendThread = new Thread() {
-
-            @Override
-            public void run() {
-                AudioFormat format = new AudioFormat(AudioFormat.Encoding.PCM_SIGNED, 44100, 16, 2, 4, 44100, true);
-                TargetDataLine microphone;
-                try {
-                    microphone = AudioSystem.getTargetDataLine(format);
-
-                    DataLine.Info info = new DataLine.Info(TargetDataLine.class, format);
-                    microphone = (TargetDataLine) AudioSystem.getLine(info);
-                    microphone.open(format);
-
-                    ByteArrayOutputStream out = new ByteArrayOutputStream();
-                    int numBytesRead;
-                    int CHUNK_SIZE = 1024;
-                    byte[] data = new byte[microphone.getBufferSize() / 5];
-                    microphone.start();
-
-                    DataLine.Info dataLineInfo = new DataLine.Info(SourceDataLine.class, format);
-
-                    int port = 5555;
-
-                    InetAddress address = InetAddress.getByName(competitorIP);
-                    DatagramSocket socket = new DatagramSocket();
-                    byte[] buffer = new byte[1024];
-                    isSending = true;
-                    while(isSending) {
-                        numBytesRead = microphone.read(data, 0, CHUNK_SIZE);
-                        out.write(data, 0, numBytesRead);
-                        DatagramPacket request = new DatagramPacket(data, numBytesRead, address, port);
-                        socket.send(request);
-
-                    }
-                    out.close();
-                    socket.close();
-                    microphone.close();
-                } catch (LineUnavailableException e) {
-                    e.printStackTrace();
-                } catch (UnknownHostException ex) {
-                    ex.printStackTrace();
-                } catch (SocketException ex) {
-                    ex.printStackTrace();
-                } catch (IOException ex) {
-                    ex.printStackTrace();
-                }
-            }
-
-        };
-        sendThread.start();
-
-    }
-
-    public void voiceCloseMic() {
-        isSending = false;
-    }
-
     
-    public void voiceListening() {
-        listenThread = new Thread() {
-            @Override
-            public void run() {
-                try {
-                    AudioFormat format = new AudioFormat(AudioFormat.Encoding.PCM_SIGNED, 44100, 16, 2, 4, 44100, true);
-                    TargetDataLine microphone;
-                    SourceDataLine speakers;
-                    DataLine.Info dataLineInfo = new DataLine.Info(SourceDataLine.class, format);
-                    speakers = (SourceDataLine) AudioSystem.getLine(dataLineInfo);
-                    speakers.open(format);
-                    speakers.start();
-                    try {
-                        DatagramSocket serverSocket = new DatagramSocket(5555);
-                        isListening = true;
-                        while (isListening) {
-                            byte[] buffer = new byte[1024];
-                            DatagramPacket response = new DatagramPacket(buffer, buffer.length);
-                            serverSocket.receive(response);
-                            speakers.write(response.getData(), 0, response.getData().length);
-                            jProgressBar1.setValue((int) volumeRMS(response.getData()));
-                        }
-                        speakers.close();
-                        serverSocket.close();
-                    } catch (SocketTimeoutException ex) {
-                        System.out.println("Timeout error: " + ex.getMessage());
-                        ex.printStackTrace();
-                    } catch (IOException ex) {
-                        System.out.println("Client error: " + ex.getMessage());
-                        ex.printStackTrace();
-                    }
-                } catch (LineUnavailableException ex) {
-                    ex.printStackTrace();
-                }
-            }
-
-        };
-        listenThread.start();
-    }
-    private int getMax(byte[] bytes){
-        int max = bytes[0];
-        for(int i=1; i<bytes.length ; i++){
-            if(bytes[i]>max) max=bytes[i];
-        }
-        return max;
-    }
-    public double volumeRMS(byte[] raw) {
-        double sum = 0d;
-        if (raw.length == 0) {
-            return sum;
-        } else {
-            for (int ii = 0; ii < raw.length; ii++) {
-                sum += raw[ii];
-            }
-        }
-        double average = sum / raw.length;
-
-        double sumMeanSquare = 0d;
-        for (int ii = 0; ii < raw.length; ii++) {
-            sumMeanSquare += Math.pow(raw[ii] - average, 2d);
-        }
-        double averageMeanSquare = sumMeanSquare / raw.length;
-        double rootMeanSquare = Math.sqrt(averageMeanSquare);
-
-        return rootMeanSquare;
-    }
-    public void voiceStopListening(){
-        isListening = false;
-    }
-    
-    public void addVoiceMessage(String message){
-        String temp = jTextArea1.getText();
-        temp += competitor.getNickname() + " " + message+"\n";
-        jTextArea1.setText(temp);
-        jTextArea1.setCaretPosition(jTextArea1.getDocument().getLength());
-    }
     public void newgame() {
         
         if (numberOfMatch % 2 == 0) {
@@ -1030,7 +827,6 @@ public class GameClientFrm extends javax.swing.JFrame{
                 button[i][j].setText("");
                 competitorMatrix[i][j] = 0;
                 matrix[i][j] = 0;
-                jButton2.setVisible(false);
             }
         }
         timer.stop();
@@ -1046,7 +842,6 @@ public class GameClientFrm extends javax.swing.JFrame{
             }
         }
     }
-
     public int checkRow() {
         int win = 0, hang = 0, n = 0, k = 0;
         boolean check = false;
@@ -1085,7 +880,6 @@ public class GameClientFrm extends javax.swing.JFrame{
         }
         return win;
     }
-
     public int checkColumn() {
         int win = 0, cot = 0;
         boolean check = false;
@@ -1391,7 +1185,6 @@ public class GameClientFrm extends javax.swing.JFrame{
     }
     private javax.swing.JLabel compretitorTurnJLabel;
     private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
     private javax.swing.JFrame jFrame1;
     private javax.swing.JFrame jFrame2;
     private javax.swing.JFrame jFrame3;
@@ -1425,8 +1218,6 @@ public class GameClientFrm extends javax.swing.JFrame{
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
-    private javax.swing.JPanel jPanel5;
-    private javax.swing.JProgressBar jProgressBar1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTextArea jTextArea1;
     private javax.swing.JTextField jTextField1;

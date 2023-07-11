@@ -163,7 +163,7 @@ public class HomePageFrm extends javax.swing.JFrame {
         getContentPane.add(btnNewButton);
         
         JButton btnNewButton_1 = new JButton("Xem phòng");
-        btnNewButton_1.setForeground(new Color(255, 255, 255));
+        btnNewButton_1.setForeground(new Color(0, 0, 0));
         btnNewButton_1.setBackground(new Color(173, 216, 230));
         btnNewButton_1.setIcon(new ImageIcon(HomePageFrm.class.getResource("/view/2303106_eye_opened_public_visible_watch_icon.png")));
         btnNewButton_1.addActionListener(new ActionListener() {
@@ -176,7 +176,7 @@ public class HomePageFrm extends javax.swing.JFrame {
         getContentPane.add(btnNewButton_1);
         
         JButton btnNewButton_2 = new JButton("Tìm phòng");
-        btnNewButton_2.setForeground(new Color(255, 255, 255));
+        btnNewButton_2.setForeground(new Color(0, 0, 0));
         btnNewButton_2.setBackground(new Color(173, 216, 230));
         btnNewButton_2.setIcon(new ImageIcon(HomePageFrm.class.getResource("/view/9004732_search_find_magnifier_zoom_icon.png")));
         btnNewButton_2.addActionListener(new ActionListener() {
@@ -189,7 +189,7 @@ public class HomePageFrm extends javax.swing.JFrame {
         getContentPane.add(btnNewButton_2);
         
         JButton btnNewButton_3 = new JButton("Bảng xếp hạng");
-        btnNewButton_3.setForeground(new Color(255, 255, 255));
+        btnNewButton_3.setForeground(new Color(0, 0, 0));
         btnNewButton_3.setBackground(new Color(173, 216, 230));
         btnNewButton_3.setIcon(new ImageIcon("assets/game/7013432_ranking_business_rank_rate_rating_icon.png"));
         btnNewButton_3.addActionListener(new ActionListener() {
@@ -202,7 +202,7 @@ public class HomePageFrm extends javax.swing.JFrame {
         getContentPane.add(btnNewButton_3);
         
         JButton btnNewButton_4 = new JButton("Chơi với máy");
-        btnNewButton_4.setForeground(new Color(255, 255, 255));
+        btnNewButton_4.setForeground(new Color(0, 0, 0));
         btnNewButton_4.setBackground(new Color(173, 216, 230));
         btnNewButton_4.setIcon(new ImageIcon(HomePageFrm.class.getResource("/view/2890568_ai_artificial intelligence_automaton_brain_electronics_icon.png")));
         btnNewButton_4.addActionListener(new ActionListener() {
@@ -215,7 +215,7 @@ public class HomePageFrm extends javax.swing.JFrame {
         getContentPane.add(btnNewButton_4);
         
         JButton btnNewButton_5 = new JButton("Hướng dẫn");
-        btnNewButton_5.setForeground(new Color(255, 255, 255));
+        btnNewButton_5.setForeground(new Color(0, 0, 0));
         btnNewButton_5.setBackground(new Color(173, 216, 230));
         btnNewButton_5.setIcon(new ImageIcon(HomePageFrm.class.getResource("/view/2191540_book_education_guide_menu_read_icon.png")));
         btnNewButton_5.addActionListener(new ActionListener() {
@@ -228,7 +228,7 @@ public class HomePageFrm extends javax.swing.JFrame {
         getContentPane.add(btnNewButton_5);
         
         JButton btnNewButton_7 = new JButton("Đăng xuất");
-        btnNewButton_7.setForeground(new Color(255, 255, 255));
+        btnNewButton_7.setForeground(new Color(0, 0, 0));
         btnNewButton_7.setBackground(new Color(173, 216, 230));
         btnNewButton_7.setIcon(new ImageIcon(HomePageFrm.class.getResource("/view/1564506_close_exit_logout_power_icon.png")));
         btnNewButton_7.addActionListener(new ActionListener() {
@@ -253,7 +253,7 @@ public class HomePageFrm extends javax.swing.JFrame {
         
         JLabel lblNewLabel_15 = new JLabel("");
         lblNewLabel_15.setIcon(new ImageIcon(HomePageFrm.class.getResource("/view/Hinh-Kamui-Chibi-Cute-de-thuong-dang-yeu (1) (2).png")));
-        lblNewLabel_15.setBounds(45, 18, 194, 191);
+        lblNewLabel_15.setBounds(69, 18, 166, 170);
         panel.add(lblNewLabel_15);
         
         if(Client.user.getNumberOfGame()==0){
@@ -321,6 +321,7 @@ public class HomePageFrm extends javax.swing.JFrame {
     }
 
     private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {
+    	  Client.closeView(Client.View.HOMEPAGE);
         Client.openView(Client.View.GAMEAI);
     }
 

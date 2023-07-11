@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package controller;
 
 
@@ -10,11 +5,7 @@ import javax.swing.JFrame;
 import javax.swing.SwingUtilities;
 
 import model.User;
-import view.CompetitorInfoFrm;
 import view.CreateRoomPasswordFrm;
-import view.FindRoomFrm;
-
-
 import view.GameClientFrm;
 import view.GameNoticeFrm;
 import view.GameAIFrm;
@@ -56,13 +47,10 @@ public class Client {
     public static RegisterFrm registerFrm;
     public static HomePageFrm homePageFrm;
     public static RoomListFrm roomListFrm;
-
-    public static FindRoomFrm findRoomFrm;
-    public static WaitingRoomFrm waitingRoomFrm;
+   public static WaitingRoomFrm waitingRoomFrm;
     public static GameClientFrm gameClientFrm;
     public static CreateRoomPasswordFrm createRoomPasswordFrm;
     public static JoinRoomPasswordFrm joinRoomPasswordFrm;
-    public static CompetitorInfoFrm competitorInfoFrm;
     public static RankFrm rankFrm;
     public static GameNoticeFrm gameNoticeFrm;
 
@@ -127,11 +115,6 @@ public class Client {
                     roomListFrm = new RoomListFrm();
                     roomListFrm.setVisible(true);
                     break;
-                
-                case FINDROOM:
-                    findRoomFrm = new FindRoomFrm();
-                    findRoomFrm.setVisible(true);
-                    break;
                 case WAITINGROOM:
                     waitingRoomFrm = new WaitingRoomFrm();
                     waitingRoomFrm.setVisible(true);
@@ -178,16 +161,6 @@ public class Client {
             }
         }
     }
-    public static void openView(View viewName, User user){
-        if(viewName != null){
-            switch(viewName){
-                case COMPETITORINFO:
-                    competitorInfoFrm = new CompetitorInfoFrm(user);
-                    competitorInfoFrm.setVisible(true);
-                    break;
-            }
-        }
-    }
     public static void openView(View viewName, String arg1, String arg2){
         if(viewName != null){
             switch(viewName){
@@ -225,11 +198,6 @@ public class Client {
                 case ROOMLIST:
                     roomListFrm.dispose();
                     break;
-               
-                case FINDROOM:
-                    findRoomFrm.stopAllThread();
-                    findRoomFrm.dispose();
-                    break;
                 case WAITINGROOM:
                     waitingRoomFrm.dispose();
                     break;
@@ -243,9 +211,7 @@ public class Client {
                 case JOINROOMPASSWORD:
                     joinRoomPasswordFrm.dispose();
                     break;
-                case COMPETITORINFO:
-                    competitorInfoFrm.dispose();
-                    break;
+               
                 case RANK:
                     rankFrm.dispose();
                     break;
@@ -269,11 +235,6 @@ public class Client {
         if(registerFrm!=null) registerFrm.dispose();
         if(homePageFrm!=null) homePageFrm.dispose();
         if(roomListFrm!=null) roomListFrm.dispose();
-        
-        if(findRoomFrm!=null){
-            findRoomFrm.stopAllThread();
-            findRoomFrm.dispose();
-        } 
         if(waitingRoomFrm!=null) waitingRoomFrm.dispose();
         if(gameClientFrm!=null){
             gameClientFrm.stopAllThread();
@@ -281,7 +242,6 @@ public class Client {
         } 
         if(createRoomPasswordFrm!=null) createRoomPasswordFrm.dispose();
         if(joinRoomPasswordFrm!=null) joinRoomPasswordFrm.dispose();
-        if(competitorInfoFrm!=null) competitorInfoFrm.dispose();
         if(rankFrm!=null) rankFrm.dispose();
         if(gameNoticeFrm!=null) gameNoticeFrm.dispose();
       
