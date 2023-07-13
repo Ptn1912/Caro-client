@@ -12,10 +12,6 @@ import java.util.Vector;
 import javax.swing.JOptionPane;
 import model.User;
 
-/**
- *
- * @author Admin
- */
 public class SocketHandle implements Runnable {
     private BufferedWriter os;
     private BufferedReader is;
@@ -50,7 +46,6 @@ public class SocketHandle implements Runnable {
     }
     @Override
     public void run() {
-
         try {
             // Gửi yêu cầu kết nối tới Server đang lắng nghe
             socketOfClient = new Socket("127.0.0.1", 7785);
@@ -177,10 +172,7 @@ public class SocketHandle implements Runnable {
                 }
                 if(messageSplit[0].equals("chat")){
                     Client.gameClientFrm.addMessage(messageSplit[1]);
-                }
-                if(messageSplit[0].equals("draw-request")){
-                    Client.gameClientFrm.showDrawRequest();
-                }
+                }                
                 if(messageSplit[0].equals("new-game")){
                     System.out.println("New game");
                     Thread.sleep(4000);
@@ -191,7 +183,7 @@ public class SocketHandle implements Runnable {
                 if(messageSplit[0].equals("draw-game")){
                     System.out.println("Draw game");
                     Client.closeView(Client.View.GAMENOTICE);
-                    Client.openView(Client.View.GAMENOTICE, "Ván chơi hòa", "Ván chơi mới dang được thiết lập");
+                    Client.openView(Client.View.GAMENOTICE, "Ván chơi hòa", "Ván chơi mới đang được thiết lập");
                     Client.gameClientFrm.displayDrawGame();
                     Thread.sleep(4000);
                     Client.gameClientFrm.updateNumberOfGame();
@@ -200,7 +192,7 @@ public class SocketHandle implements Runnable {
                 }
                 if(messageSplit[0].equals("competitor-time-out")){
                     Client.gameClientFrm.increaseWinMatchToUser();
-                    Client.openView(Client.View.GAMENOTICE,"Bạn đã thắng do đối thủ quá thới gian","Đang thiết lập ván chơi mới");
+                    Client.openView(Client.View.GAMENOTICE,"Bạn đã thắng do đối thủ quá thời gian","Đang thiết lập ván chơi mới");
                     Thread.sleep(4000);
                     Client.closeView(Client.View.GAMENOTICE);
                     Client.gameClientFrm.updateNumberOfGame();

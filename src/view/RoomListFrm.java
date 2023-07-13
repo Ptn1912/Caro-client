@@ -1,6 +1,4 @@
-
 package view;
-
 import controller.Client;
 import java.io.IOException;
 import java.util.ArrayList;

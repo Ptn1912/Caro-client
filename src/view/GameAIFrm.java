@@ -8,6 +8,8 @@ import java.awt.event.MouseListener;
 import java.io.IOException;
 
 import javax.swing.ImageIcon;
+import javax.swing.JFrame;
+
 import java.util.ArrayList;
 import javax.swing.JOptionPane;
 import model.Point;
@@ -31,7 +33,7 @@ public class GameAIFrm extends javax.swing.JFrame {
     public GameAIFrm() {
         initComponents();
         this.setTitle("Caro Game");
-        this.setDefaultCloseOperation(DISPOSE_ON_CLOSE);
+    	setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         this.setResizable(false);
         this.setLocationRelativeTo(null);
         this.setIconImage(new ImageIcon("assets/image/caroicon.png").getImage());
@@ -87,7 +89,6 @@ public class GameAIFrm extends javax.swing.JFrame {
         gameNumber++;
         preButton=null;
     }
-
     private void initComponents() {
 
         jFrame1 = new javax.swing.JFrame();

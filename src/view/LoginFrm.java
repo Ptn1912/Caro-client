@@ -1,5 +1,4 @@
 package view;
-
 import controller.Client;
 import javax.swing.ImageIcon;
 import javax.swing.JOptionPane;

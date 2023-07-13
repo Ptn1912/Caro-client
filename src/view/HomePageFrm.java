@@ -1,6 +1,4 @@
 package view;
-
-
 import controller.Client;
 import model.User;
 
@@ -33,8 +31,7 @@ public class HomePageFrm extends javax.swing.JFrame {
         initComponents();
         jTextArea1.setEditable(false);
     }
-    private void initComponents() {
-    	
+    private void initComponents() {	
     	jTextArea1 = new javax.swing.JTextArea();
 
          setTitle("Caro Game");
@@ -57,15 +54,7 @@ public class HomePageFrm extends javax.swing.JFrame {
         panel.setLayout(null);
         
         JLabel lblNewLabel = new JLabel("NickName");
-        lblNewLabel.addAncestorListener(new javax.swing.event.AncestorListener() {
-            public void ancestorAdded(javax.swing.event.AncestorEvent evt) {
-            }
-            public void ancestorMoved(javax.swing.event.AncestorEvent evt) {
-                jLabel1AncestorMoved(evt);
-            }
-            public void ancestorRemoved(javax.swing.event.AncestorEvent evt) {
-            }
-        });
+       
         lblNewLabel.setFont(new Font("Tahoma", Font.PLAIN, 16));
         lblNewLabel.setForeground(new Color(255, 255, 255));
         lblNewLabel.setBounds(25, 222, 93, 24);
@@ -263,10 +252,6 @@ public class HomePageFrm extends javax.swing.JFrame {
         	lblNewLabel_12.setText(String.format("%.2f", (float)Client.user.getNumberOfwin()/Client.user.getNumberOfGame()*100)+"%");
         }
     }
-    private void jLabel1AncestorMoved(javax.swing.event.AncestorEvent evt) {
-   
-    }
-
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {
         int res = JOptionPane.showConfirmDialog(rootPane, "Bạn có muốn đặt mật khẩu cho phòng không?", "Tạo phòng", JOptionPane.YES_NO_OPTION);
         if(res==JOptionPane.YES_OPTION){
@@ -315,11 +300,7 @@ public class HomePageFrm extends javax.swing.JFrame {
         Client.closeView(Client.View.HOMEPAGE);
         Client.openView(Client.View.LOGIN);
     }
-
-    private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {
-        this.dispatchEvent(new WindowEvent(this, WindowEvent.WINDOW_CLOSING));
-    }
-
+    
     private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {
     	  Client.closeView(Client.View.HOMEPAGE);
         Client.openView(Client.View.GAMEAI);
@@ -335,12 +316,7 @@ public class HomePageFrm extends javax.swing.JFrame {
         jTextArea1.setCaretPosition(jTextArea1.getDocument().getLength());
     }
     private JPanel getContentPane;
-
-  
     private javax.swing.JButton jButton9;
-    
-    private javax.swing.JLayeredPane jLayeredPane1;
-    private javax.swing.JPanel jPanel1;
-    private javax.swing.JScrollPane jScrollPane1;
+
     private javax.swing.JTextArea jTextArea1;
 }

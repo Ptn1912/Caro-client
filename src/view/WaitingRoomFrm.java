@@ -1,6 +1,4 @@
-
 package view;
-
 import controller.Client;
 import java.awt.Color;
 import java.io.IOException;

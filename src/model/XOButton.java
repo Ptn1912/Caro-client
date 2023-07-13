@@ -1,7 +1,3 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package model;
 
 import java.awt.Color;
@@ -28,18 +24,15 @@ public class XOButton extends JButton {
 		this.point = new Point(x, y);
                 XOButton _this = this;
 		this.addMouseListener( new MouseListener() {
-
                     @Override
                     public void mouseReleased(MouseEvent e) {
                         // TODO Auto-generated method stub
                     }
-
                     @Override
                     public void mousePressed(MouseEvent e) {
                         // TODO Auto-generated method stub
 
                     }
-
                     @Override
                     public void mouseExited(MouseEvent e) {
                         if(_this.isEnabled()){
@@ -47,7 +40,6 @@ public class XOButton extends JButton {
                             _this.setIcon(new ImageIcon("assets/image/blank.jpg"));
                         }
                     }
-
                     @Override
                     public void mouseEntered(MouseEvent e) {
                         if(_this.isEnabled()) {
@@ -55,7 +47,6 @@ public class XOButton extends JButton {
                             _this.setIcon(new ImageIcon("assets/image/x3.jpg"));
                         }
                     }
-
                     @Override
                     public void mouseClicked(MouseEvent e) {
                         // TODO Auto-generated method stub

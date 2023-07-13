@@ -1,4 +1,3 @@
-
 package view;
 import controller.Client;
 import java.io.IOException;

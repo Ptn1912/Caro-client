@@ -1,6 +1,4 @@
 package controller;
-
-
 import javax.swing.JFrame;
 import javax.swing.SwingUtilities;
 
@@ -18,26 +16,19 @@ import view.RoomListFrm;
 import view.RoomNameFrm;
 import view.WaitingRoomFrm;
 
-/**
- *
- * @author Admin
- */
 public class Client {
     public enum View{
         LOGIN,
         REGISTER,
         HOMEPAGE,
-        ROOMLIST,
-      
+        ROOMLIST,     
         FINDROOM,
         WAITINGROOM,
         GAMECLIENT,
         CREATEROOMPASSWORD,
         JOINROOMPASSWORD,
-        COMPETITORINFO,
         RANK,
-        GAMENOTICE,
-    
+        GAMENOTICE,    
         GAMEAI,
         ROOMNAMEFRM
     }
@@ -138,8 +129,7 @@ public class Client {
             }
         }
     }
-    	
-    
+    	   
     public static void openView(View viewName, int arg1, String arg2){
         if(viewName != null){
             switch(viewName){
@@ -225,8 +215,7 @@ public class Client {
                 case ROOMNAMEFRM:
                     roomNameFrm.dispose();
                     break;
-            }
-            
+            }           
         }
     }
     	
@@ -243,8 +232,7 @@ public class Client {
         if(createRoomPasswordFrm!=null) createRoomPasswordFrm.dispose();
         if(joinRoomPasswordFrm!=null) joinRoomPasswordFrm.dispose();
         if(rankFrm!=null) rankFrm.dispose();
-        if(gameNoticeFrm!=null) gameNoticeFrm.dispose();
-      
+        if(gameNoticeFrm!=null) gameNoticeFrm.dispose();     
         if(gameAIFrm!=null) gameAIFrm.dispose();
         if(roomNameFrm!=null) roomNameFrm.dispose();
     }
